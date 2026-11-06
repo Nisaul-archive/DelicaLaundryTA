@@ -43,8 +43,19 @@ Partial Class FrmServices
         Me.Guna2CustomGradientPanel4 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2GradientButton5 = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Guna2GradientButton4 = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2GradientButton3 = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2GradientButton2 = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2ComboBox2 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Guna2NumericUpDown3 = New Guna.UI2.WinForms.Guna2NumericUpDown()
+        Me.Guna2NumericUpDown2 = New Guna.UI2.WinForms.Guna2NumericUpDown()
+        Me.Guna2NumericUpDown1 = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
@@ -60,7 +71,11 @@ Partial Class FrmServices
         Me.pnlHeaderServices.SuspendLayout()
         Me.Guna2CustomGradientPanel4.SuspendLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Guna2Panel1.SuspendLayout()
         Me.Guna2GroupBox1.SuspendLayout()
+        CType(Me.Guna2NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel3
@@ -70,7 +85,7 @@ Partial Class FrmServices
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(200, 651)
+        Me.Panel3.Size = New System.Drawing.Size(200, 744)
         Me.Panel3.TabIndex = 2
         '
         'Guna2CustomGradientPanel2
@@ -96,7 +111,7 @@ Partial Class FrmServices
         Me.pnlSidebarServices.FillColor4 = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.pnlSidebarServices.Location = New System.Drawing.Point(0, 0)
         Me.pnlSidebarServices.Name = "pnlSidebarServices"
-        Me.pnlSidebarServices.Size = New System.Drawing.Size(200, 651)
+        Me.pnlSidebarServices.Size = New System.Drawing.Size(200, 781)
         Me.pnlSidebarServices.TabIndex = 0
         '
         'Guna2ImageButton1
@@ -126,7 +141,7 @@ Partial Class FrmServices
         Me.Guna2TileButton1.FillColor = System.Drawing.Color.White
         Me.Guna2TileButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TileButton1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TileButton1.Location = New System.Drawing.Point(12, 345)
+        Me.Guna2TileButton1.Location = New System.Drawing.Point(12, 468)
         Me.Guna2TileButton1.Name = "Guna2TileButton1"
         Me.Guna2TileButton1.Size = New System.Drawing.Size(180, 45)
         Me.Guna2TileButton1.TabIndex = 6
@@ -134,7 +149,7 @@ Partial Class FrmServices
         '
         'Guna2Button6
         '
-        Me.Guna2Button6.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button6.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -142,7 +157,7 @@ Partial Class FrmServices
         Me.Guna2Button6.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button6.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button6.Location = New System.Drawing.Point(3, 284)
+        Me.Guna2Button6.Location = New System.Drawing.Point(0, 393)
         Me.Guna2Button6.Name = "Guna2Button6"
         Me.Guna2Button6.PressedColor = System.Drawing.Color.LightSkyBlue
         Me.Guna2Button6.Size = New System.Drawing.Size(200, 45)
@@ -152,15 +167,17 @@ Partial Class FrmServices
         '
         'Guna2Button5
         '
-        Me.Guna2Button5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button5.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Guna2Button5.BorderColor = System.Drawing.Color.Transparent
+        Me.Guna2Button5.BorderRadius = 30
         Me.Guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.Guna2Button5.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2Button5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2Button5.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button5.Location = New System.Drawing.Point(0, 247)
+        Me.Guna2Button5.Location = New System.Drawing.Point(1, 341)
         Me.Guna2Button5.Name = "Guna2Button5"
         Me.Guna2Button5.PressedColor = System.Drawing.Color.LightSkyBlue
         Me.Guna2Button5.Size = New System.Drawing.Size(200, 45)
@@ -170,7 +187,7 @@ Partial Class FrmServices
         '
         'Guna2Button4
         '
-        Me.Guna2Button4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button4.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -178,7 +195,7 @@ Partial Class FrmServices
         Me.Guna2Button4.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button4.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button4.Location = New System.Drawing.Point(0, 211)
+        Me.Guna2Button4.Location = New System.Drawing.Point(1, 290)
         Me.Guna2Button4.Name = "Guna2Button4"
         Me.Guna2Button4.PressedColor = System.Drawing.Color.LightSkyBlue
         Me.Guna2Button4.Size = New System.Drawing.Size(200, 45)
@@ -188,7 +205,7 @@ Partial Class FrmServices
         '
         'Guna2Button3
         '
-        Me.Guna2Button3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button3.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -196,7 +213,7 @@ Partial Class FrmServices
         Me.Guna2Button3.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button3.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button3.Location = New System.Drawing.Point(0, 176)
+        Me.Guna2Button3.Location = New System.Drawing.Point(1, 239)
         Me.Guna2Button3.Name = "Guna2Button3"
         Me.Guna2Button3.PressedColor = System.Drawing.Color.LightSkyBlue
         Me.Guna2Button3.Size = New System.Drawing.Size(200, 45)
@@ -206,7 +223,7 @@ Partial Class FrmServices
         '
         'Guna2Button2
         '
-        Me.Guna2Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button2.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -214,7 +231,7 @@ Partial Class FrmServices
         Me.Guna2Button2.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(1, 141)
+        Me.Guna2Button2.Location = New System.Drawing.Point(1, 187)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.PressedColor = System.Drawing.Color.LightSkyBlue
         Me.Guna2Button2.Size = New System.Drawing.Size(200, 45)
@@ -224,7 +241,7 @@ Partial Class FrmServices
         '
         'Guna2Button1
         '
-        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -232,7 +249,7 @@ Partial Class FrmServices
         Me.Guna2Button1.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(8, 111)
+        Me.Guna2Button1.Location = New System.Drawing.Point(0, 136)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.PressedColor = System.Drawing.Color.LightSkyBlue
         Me.Guna2Button1.Size = New System.Drawing.Size(200, 45)
@@ -251,7 +268,7 @@ Partial Class FrmServices
         Me.pnlHeaderServices.FillColor4 = System.Drawing.Color.FromArgb(CType(CType(99, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.pnlHeaderServices.Location = New System.Drawing.Point(200, 0)
         Me.pnlHeaderServices.Name = "pnlHeaderServices"
-        Me.pnlHeaderServices.Size = New System.Drawing.Size(738, 78)
+        Me.pnlHeaderServices.Size = New System.Drawing.Size(808, 78)
         Me.pnlHeaderServices.TabIndex = 3
         '
         'Guna2HtmlLabel2
@@ -290,7 +307,7 @@ Partial Class FrmServices
         Me.Guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2CustomGradientPanel4.Location = New System.Drawing.Point(200, 78)
         Me.Guna2CustomGradientPanel4.Name = "Guna2CustomGradientPanel4"
-        Me.Guna2CustomGradientPanel4.Size = New System.Drawing.Size(738, 573)
+        Me.Guna2CustomGradientPanel4.Size = New System.Drawing.Size(808, 666)
         Me.Guna2CustomGradientPanel4.TabIndex = 4
         '
         'Guna2DataGridView1
@@ -311,38 +328,83 @@ Partial Class FrmServices
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle9
         Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2DataGridView1.Location = New System.Drawing.Point(15, 367)
+        Me.Guna2DataGridView1.Location = New System.Drawing.Point(15, 378)
         Me.Guna2DataGridView1.Name = "Guna2DataGridView1"
         Me.Guna2DataGridView1.RowHeadersVisible = False
         Me.Guna2DataGridView1.RowHeadersWidth = 62
         Me.Guna2DataGridView1.RowTemplate.Height = 28
-        Me.Guna2DataGridView1.Size = New System.Drawing.Size(711, 194)
+        Me.Guna2DataGridView1.Size = New System.Drawing.Size(779, 276)
         Me.Guna2DataGridView1.TabIndex = 12
         Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.Guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke
         Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 28
         '
         'Guna2Panel1
         '
+        Me.Guna2Panel1.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.Guna2Panel1.Controls.Add(Me.Guna2HtmlLabel10)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2GradientButton5)
+        Me.Guna2Panel1.Controls.Add(Me.Guna2Panel2)
         Me.Guna2Panel1.Location = New System.Drawing.Point(15, 327)
         Me.Guna2Panel1.Name = "Guna2Panel1"
-        Me.Guna2Panel1.Size = New System.Drawing.Size(711, 33)
+        Me.Guna2Panel1.Size = New System.Drawing.Size(779, 33)
         Me.Guna2Panel1.TabIndex = 11
+        '
+        'Guna2HtmlLabel10
+        '
+        Me.Guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel10.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black
+        Me.Guna2HtmlLabel10.Location = New System.Drawing.Point(10, 4)
+        Me.Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
+        Me.Guna2HtmlLabel10.Size = New System.Drawing.Size(93, 23)
+        Me.Guna2HtmlLabel10.TabIndex = 21
+        Me.Guna2HtmlLabel10.Text = "Cari Layanan"
+        '
+        'Guna2GradientButton5
+        '
+        Me.Guna2GradientButton5.BorderRadius = 8
+        Me.Guna2GradientButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2GradientButton5.FillColor = System.Drawing.Color.Chartreuse
+        Me.Guna2GradientButton5.FillColor2 = System.Drawing.Color.Chartreuse
+        Me.Guna2GradientButton5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2GradientButton5.ForeColor = System.Drawing.Color.Black
+        Me.Guna2GradientButton5.Location = New System.Drawing.Point(688, 4)
+        Me.Guna2GradientButton5.Name = "Guna2GradientButton5"
+        Me.Guna2GradientButton5.Size = New System.Drawing.Size(76, 26)
+        Me.Guna2GradientButton5.TabIndex = 21
+        Me.Guna2GradientButton5.Text = "Cari"
+        Me.Guna2GradientButton5.TextOffset = New System.Drawing.Point(0, -2)
+        '
+        'Guna2Panel2
+        '
+        Me.Guna2Panel2.BackColor = System.Drawing.Color.AliceBlue
+        Me.Guna2Panel2.BorderColor = System.Drawing.Color.White
+        Me.Guna2Panel2.BorderRadius = 10
+        Me.Guna2Panel2.Location = New System.Drawing.Point(120, 4)
+        Me.Guna2Panel2.Name = "Guna2Panel2"
+        Me.Guna2Panel2.Size = New System.Drawing.Size(562, 26)
+        Me.Guna2Panel2.TabIndex = 0
         '
         'Guna2HtmlLabel1
         '
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(208, 7)
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(251, 3)
         Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(316, 38)
         Me.Guna2HtmlLabel1.TabIndex = 2
@@ -350,6 +412,14 @@ Partial Class FrmServices
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2GradientButton4)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2GradientButton3)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2GradientButton2)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2GradientButton1)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2ComboBox2)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2NumericUpDown3)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2NumericUpDown2)
+        Me.Guna2GroupBox1.Controls.Add(Me.Guna2NumericUpDown1)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2ComboBox1)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2TextBox2)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2TextBox1)
@@ -364,9 +434,141 @@ Partial Class FrmServices
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(14, 50)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(712, 270)
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(780, 270)
         Me.Guna2GroupBox1.TabIndex = 10
         Me.Guna2GroupBox1.Text = "Form Data Layanan"
+        '
+        'Guna2GradientButton4
+        '
+        Me.Guna2GradientButton4.BorderRadius = 8
+        Me.Guna2GradientButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton4.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2GradientButton4.FillColor = System.Drawing.Color.LightGray
+        Me.Guna2GradientButton4.FillColor2 = System.Drawing.Color.LightGray
+        Me.Guna2GradientButton4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2GradientButton4.ForeColor = System.Drawing.Color.Black
+        Me.Guna2GradientButton4.Image = CType(resources.GetObject("Guna2GradientButton4.Image"), System.Drawing.Image)
+        Me.Guna2GradientButton4.Location = New System.Drawing.Point(630, 212)
+        Me.Guna2GradientButton4.Name = "Guna2GradientButton4"
+        Me.Guna2GradientButton4.Size = New System.Drawing.Size(135, 45)
+        Me.Guna2GradientButton4.TabIndex = 20
+        Me.Guna2GradientButton4.Text = "Reset"
+        Me.Guna2GradientButton4.TextOffset = New System.Drawing.Point(2, -2)
+        '
+        'Guna2GradientButton3
+        '
+        Me.Guna2GradientButton3.BorderRadius = 8
+        Me.Guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2GradientButton3.FillColor = System.Drawing.Color.Red
+        Me.Guna2GradientButton3.FillColor2 = System.Drawing.Color.Red
+        Me.Guna2GradientButton3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2GradientButton3.ForeColor = System.Drawing.Color.Black
+        Me.Guna2GradientButton3.Image = CType(resources.GetObject("Guna2GradientButton3.Image"), System.Drawing.Image)
+        Me.Guna2GradientButton3.Location = New System.Drawing.Point(489, 212)
+        Me.Guna2GradientButton3.Name = "Guna2GradientButton3"
+        Me.Guna2GradientButton3.Size = New System.Drawing.Size(135, 45)
+        Me.Guna2GradientButton3.TabIndex = 19
+        Me.Guna2GradientButton3.Text = "Hapus"
+        Me.Guna2GradientButton3.TextOffset = New System.Drawing.Point(2, -2)
+        '
+        'Guna2GradientButton2
+        '
+        Me.Guna2GradientButton2.BorderRadius = 8
+        Me.Guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2GradientButton2.FillColor = System.Drawing.Color.CornflowerBlue
+        Me.Guna2GradientButton2.FillColor2 = System.Drawing.Color.DodgerBlue
+        Me.Guna2GradientButton2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2GradientButton2.ForeColor = System.Drawing.Color.Black
+        Me.Guna2GradientButton2.Image = CType(resources.GetObject("Guna2GradientButton2.Image"), System.Drawing.Image)
+        Me.Guna2GradientButton2.ImageOffset = New System.Drawing.Point(-2, 0)
+        Me.Guna2GradientButton2.Location = New System.Drawing.Point(348, 212)
+        Me.Guna2GradientButton2.Name = "Guna2GradientButton2"
+        Me.Guna2GradientButton2.Size = New System.Drawing.Size(135, 45)
+        Me.Guna2GradientButton2.TabIndex = 18
+        Me.Guna2GradientButton2.Text = "Edit"
+        Me.Guna2GradientButton2.TextFormatNoPrefix = True
+        Me.Guna2GradientButton2.TextOffset = New System.Drawing.Point(-1, -2)
+        '
+        'Guna2GradientButton1
+        '
+        Me.Guna2GradientButton1.BorderRadius = 8
+        Me.Guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2GradientButton1.FillColor = System.Drawing.Color.Chartreuse
+        Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.Chartreuse
+        Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.Black
+        Me.Guna2GradientButton1.Image = CType(resources.GetObject("Guna2GradientButton1.Image"), System.Drawing.Image)
+        Me.Guna2GradientButton1.Location = New System.Drawing.Point(207, 212)
+        Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
+        Me.Guna2GradientButton1.Size = New System.Drawing.Size(135, 45)
+        Me.Guna2GradientButton1.TabIndex = 17
+        Me.Guna2GradientButton1.Text = "Simpan"
+        Me.Guna2GradientButton1.TextOffset = New System.Drawing.Point(2, -2)
+        '
+        'Guna2ComboBox2
+        '
+        Me.Guna2ComboBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.Guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2ComboBox2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.Guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.Guna2ComboBox2.ItemHeight = 30
+        Me.Guna2ComboBox2.Location = New System.Drawing.Point(557, 128)
+        Me.Guna2ComboBox2.Name = "Guna2ComboBox2"
+        Me.Guna2ComboBox2.Size = New System.Drawing.Size(192, 36)
+        Me.Guna2ComboBox2.TabIndex = 16
+        '
+        'Guna2NumericUpDown3
+        '
+        Me.Guna2NumericUpDown3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2NumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2NumericUpDown3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2NumericUpDown3.Location = New System.Drawing.Point(557, 89)
+        Me.Guna2NumericUpDown3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Guna2NumericUpDown3.Name = "Guna2NumericUpDown3"
+        Me.Guna2NumericUpDown3.Size = New System.Drawing.Size(192, 28)
+        Me.Guna2NumericUpDown3.TabIndex = 15
+        Me.Guna2NumericUpDown3.ThousandsSeparator = True
+        '
+        'Guna2NumericUpDown2
+        '
+        Me.Guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2NumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2NumericUpDown2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2NumericUpDown2.Location = New System.Drawing.Point(557, 51)
+        Me.Guna2NumericUpDown2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Guna2NumericUpDown2.Name = "Guna2NumericUpDown2"
+        Me.Guna2NumericUpDown2.Size = New System.Drawing.Size(192, 28)
+        Me.Guna2NumericUpDown2.TabIndex = 14
+        '
+        'Guna2NumericUpDown1
+        '
+        Me.Guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Guna2NumericUpDown1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2NumericUpDown1.Location = New System.Drawing.Point(182, 162)
+        Me.Guna2NumericUpDown1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Guna2NumericUpDown1.Name = "Guna2NumericUpDown1"
+        Me.Guna2NumericUpDown1.Size = New System.Drawing.Size(192, 28)
+        Me.Guna2NumericUpDown1.TabIndex = 13
+        Me.Guna2NumericUpDown1.ThousandsSeparator = True
         '
         'Guna2ComboBox1
         '
@@ -380,7 +582,7 @@ Partial Class FrmServices
         Me.Guna2ComboBox1.ItemHeight = 30
         Me.Guna2ComboBox1.Location = New System.Drawing.Point(182, 119)
         Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Me.Guna2ComboBox1.Size = New System.Drawing.Size(289, 36)
+        Me.Guna2ComboBox1.Size = New System.Drawing.Size(192, 36)
         Me.Guna2ComboBox1.TabIndex = 12
         '
         'Guna2TextBox2
@@ -401,7 +603,7 @@ Partial Class FrmServices
         Me.Guna2TextBox2.PlaceholderForeColor = System.Drawing.Color.White
         Me.Guna2TextBox2.PlaceholderText = ""
         Me.Guna2TextBox2.SelectedText = ""
-        Me.Guna2TextBox2.Size = New System.Drawing.Size(289, 29)
+        Me.Guna2TextBox2.Size = New System.Drawing.Size(192, 29)
         Me.Guna2TextBox2.TabIndex = 11
         '
         'Guna2TextBox1
@@ -422,7 +624,7 @@ Partial Class FrmServices
         Me.Guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.White
         Me.Guna2TextBox1.PlaceholderText = ""
         Me.Guna2TextBox1.SelectedText = ""
-        Me.Guna2TextBox1.Size = New System.Drawing.Size(289, 28)
+        Me.Guna2TextBox1.Size = New System.Drawing.Size(192, 29)
         Me.Guna2TextBox1.TabIndex = 10
         '
         'Guna2HtmlLabel9
@@ -430,7 +632,7 @@ Partial Class FrmServices
         Me.Guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel9.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(11, 233)
+        Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(391, 132)
         Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
         Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(110, 23)
         Me.Guna2HtmlLabel9.TabIndex = 9
@@ -441,7 +643,7 @@ Partial Class FrmServices
         Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(12, 178)
+        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(391, 55)
         Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
         Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(146, 23)
         Me.Guna2HtmlLabel7.TabIndex = 7
@@ -452,7 +654,7 @@ Partial Class FrmServices
         Me.Guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel8.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(11, 206)
+        Me.Guna2HtmlLabel8.Location = New System.Drawing.Point(391, 89)
         Me.Guna2HtmlLabel8.Name = "Guna2HtmlLabel8"
         Me.Guna2HtmlLabel8.Size = New System.Drawing.Size(100, 23)
         Me.Guna2HtmlLabel8.TabIndex = 8
@@ -484,7 +686,7 @@ Partial Class FrmServices
         Me.Guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent
         Me.Guna2HtmlLabel6.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(11, 151)
+        Me.Guna2HtmlLabel6.Location = New System.Drawing.Point(11, 163)
         Me.Guna2HtmlLabel6.Name = "Guna2HtmlLabel6"
         Me.Guna2HtmlLabel6.Size = New System.Drawing.Size(109, 23)
         Me.Guna2HtmlLabel6.TabIndex = 6
@@ -505,7 +707,7 @@ Partial Class FrmServices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(938, 651)
+        Me.ClientSize = New System.Drawing.Size(1008, 744)
         Me.Controls.Add(Me.Guna2CustomGradientPanel4)
         Me.Controls.Add(Me.pnlHeaderServices)
         Me.Controls.Add(Me.Panel3)
@@ -518,8 +720,13 @@ Partial Class FrmServices
         Me.Guna2CustomGradientPanel4.ResumeLayout(False)
         Me.Guna2CustomGradientPanel4.PerformLayout()
         CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Guna2Panel1.ResumeLayout(False)
+        Me.Guna2Panel1.PerformLayout()
         Me.Guna2GroupBox1.ResumeLayout(False)
         Me.Guna2GroupBox1.PerformLayout()
+        CType(Me.Guna2NumericUpDown3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2NumericUpDown2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -552,4 +759,15 @@ Partial Class FrmServices
     Friend WithEvents Guna2ImageButton1 As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2NumericUpDown1 As Guna.UI2.WinForms.Guna2NumericUpDown
+    Friend WithEvents Guna2NumericUpDown2 As Guna.UI2.WinForms.Guna2NumericUpDown
+    Friend WithEvents Guna2NumericUpDown3 As Guna.UI2.WinForms.Guna2NumericUpDown
+    Friend WithEvents Guna2ComboBox2 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2GradientButton1 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2GradientButton4 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2GradientButton3 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2GradientButton2 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2GradientButton5 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents Guna2HtmlLabel10 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
