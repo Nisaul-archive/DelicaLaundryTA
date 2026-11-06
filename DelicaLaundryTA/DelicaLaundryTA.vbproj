@@ -197,6 +197,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmServices.resx">
       <DependentUpon>FrmServices.vb</DependentUpon>
     </EmbeddedResource>
