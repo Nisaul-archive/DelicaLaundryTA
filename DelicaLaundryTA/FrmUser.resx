@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Guna2GradientButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnResetUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAB2
         GwAAdhsB9YbelQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADDHSURBVHhe7d13
@@ -333,10 +333,10 @@
         sCpPKN4aAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Guna2GradientButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDeleteUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1AAADdQB75G6FQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEpqSURBVHhe7d13
+        0AAADdABEGw9BwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAEpqSURBVHhe7d13
         2G1ldTX8AYiACMJrRQE7ojHGThCN2BuiqKioWDBiy+uLIobYsDewd9RYQQ2xI9YgVizYEQEVUVBRUaLY
         iEq+a3o23+GMe55znrL2WHvea/zxu65cM3LOmGvPPddznr32Wvjf//1fmPUOwOYAdgFwawD7ATgYwBEA
         jgbwKQCnATgfQPyPrV/xGsdrfcLstY8ZiFmImdhzNiOb8/yY9agpmPUCwDYA9gVwFIDzkpOBWSZmJWYm
@@ -657,10 +657,10 @@
         vNfjPR/v/dgBsQtiJ2zN+8L69v8BNfKnj7tVYB8AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="Guna2GradientButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnUpdateUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACnASURBVHhe7d0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACnASURBVHhe7d0J
         1DxZXR7g37AIDtsM4zJIHCZIWAZzIqAJIipwEAlkZJMgoKiggBIkogLuiGAAAcWVkUXE6OgYF2RJlLgE
         ISiyI+JA2DMGBAZGthkGJjlXu8PfW7f/9fVX/auu6nqec95zPAPz3erbeN9b1d1VEQCwvVMj4qsj4qER
         8ZSIeH5EvDEi3hYRF0fEpRHxf1f/90UR8daIeGlEPDsiHhMRXx8RN6j/KAAwLVdaFf5PRMTLIuKyVcEP
@@ -842,10 +842,10 @@
         weB4A4++uwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Guna2GradientButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSaveUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACQJSURBVHhe7d1b
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACQJSURBVHhe7d1b
         7HZpWd/xi2FjIpsZ6MBBo420SeOBrbbOUJWkMWhqEUGktVXZ1LCZ1sNqTdrE0lI8oFoEjlrboIkbtodN
         T2sgdIzsYeAABMJBi8oMtAMVZgpMm6UPVb6zZuadd973d61r3d9P8j2e637u9ax7zf///p+nSpIkSZIk
         SZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkreTGqrq1ql5UVb9YVW+rqt+t
