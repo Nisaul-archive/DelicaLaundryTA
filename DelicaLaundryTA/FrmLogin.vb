@@ -91,4 +91,14 @@ Public Class FrmLogin
         End Try
     End Sub
 
+    Private Sub btnGenerateHash_Click(sender As Object, e As EventArgs) Handles btnGenerateHash.Click
+
+        Dim password As String = "DelicaOwner123!"
+
+        Dim hash As String =
+        BCrypt.Net.BCrypt.HashPassword(password)
+
+        MessageBox.Show(hash, "Password Hash")
+
+    End Sub
 End Class

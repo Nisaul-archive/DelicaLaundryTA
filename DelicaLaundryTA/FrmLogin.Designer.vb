@@ -25,6 +25,7 @@ Partial Class FrmLogin
         Me.txtUsername = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtPassword = New Guna.UI2.WinForms.Guna2TextBox()
         Me.btnLogin = New Guna.UI2.WinForms.Guna2TileButton()
+        Me.btnGenerateHash = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txtUsername
@@ -80,11 +81,20 @@ Partial Class FrmLogin
         Me.btnLogin.FillColor = System.Drawing.Color.DodgerBlue
         Me.btnLogin.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.Black
-        Me.btnLogin.Location = New System.Drawing.Point(314, 276)
+        Me.btnLogin.Location = New System.Drawing.Point(312, 269)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(180, 45)
         Me.btnLogin.TabIndex = 7
         Me.btnLogin.Text = "Login"
+        '
+        'btnGenerateHash
+        '
+        Me.btnGenerateHash.Location = New System.Drawing.Point(610, 174)
+        Me.btnGenerateHash.Name = "btnGenerateHash"
+        Me.btnGenerateHash.Size = New System.Drawing.Size(116, 68)
+        Me.btnGenerateHash.TabIndex = 8
+        Me.btnGenerateHash.Text = "Generate Hash"
+        Me.btnGenerateHash.UseVisualStyleBackColor = True
         '
         'FrmLogin
         '
@@ -92,6 +102,7 @@ Partial Class FrmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btnGenerateHash)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtUsername)
@@ -103,5 +114,5 @@ Partial Class FrmLogin
     Friend WithEvents txtUsername As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtPassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnLogin As Guna.UI2.WinForms.Guna2TileButton
-
+    Friend WithEvents btnGenerateHash As Button
 End Class
