@@ -1,17 +1,18 @@
-﻿Imports MySqlConnector
-Imports System.Data
+﻿Imports System.Data
+Imports Guna.UI2.WinForms
+Imports MySqlConnector
 
 Public Class FrmServices
 
     Private selectedServiceId As Integer = 0
 
     Private Sub FrmServices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dgvService.Columns.Clear()
-        dgvService.AutoGenerateColumns = True
-        dgvService.ReadOnly = True
-        dgvService.AllowUserToAddRows = False
-        dgvService.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        Guna2DataGridView1.Columns.Clear()
+        Guna2DataGridView1.AutoGenerateColumns = True
+        Guna2DataGridView1.ReadOnly = True
+        Guna2DataGridView1.AllowUserToAddRows = False
+        Guna2DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        Guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         txtServiceID.ReadOnly = True
         txtServiceID.TabStop = False
         LoadServiceNames()
@@ -101,9 +102,9 @@ Public Class FrmServices
                     Using da As New MySqlDataAdapter(cmd)
                         Dim dt As New DataTable()
                         da.Fill(dt)
-                        dgvService.DataSource = dt
-                        If dgvService.Columns.Contains("ID") Then
-                            dgvService.Columns("ID").Visible = False
+                        Guna2DataGridView1.DataSource = dt
+                        If Guna2DataGridView1.Columns.Contains("ID") Then
+                            Guna2DataGridView1.Columns("ID").Visible = False
                         End If
                     End Using
                 End Using
@@ -234,7 +235,7 @@ Public Class FrmServices
         btnSaveService.Enabled = True
         btnUpdateService.Enabled = False
         btnDeleteService.Enabled = False
-        dgvService.ClearSelection()
+        Guna2DataGridView1.ClearSelection()
         TampilkanIdPerkiraan()
         cmbServiceName.Focus()
     End Sub
@@ -247,9 +248,9 @@ Public Class FrmServices
         LoadServices(txtSearchService.Text)
     End Sub
 
-    Private Sub dgvService_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvService.CellClick
+    Private Sub Guna2DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Guna2DataGridView1.CellClick
         If e.RowIndex < 0 Then Return
-        Dim row = dgvService.Rows(e.RowIndex)
+        Dim row = Guna2DataGridView1.Rows(e.RowIndex)
         selectedServiceId = Convert.ToInt32(row.Cells("ID").Value)
         txtServiceID.Text = "SRV-" & selectedServiceId.ToString("000")
         cmbServiceName.Text = Convert.ToString(row.Cells("Nama Layanan").Value)

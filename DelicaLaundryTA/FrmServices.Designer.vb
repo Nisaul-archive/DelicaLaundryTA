@@ -22,6 +22,10 @@ Partial Class FrmServices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle =
+        New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmServices))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -66,7 +70,7 @@ Partial Class FrmServices
         Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.pnlContent = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
-        Me.dgvService = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Panel3.SuspendLayout()
         Me.pnlSidebarServices.SuspendLayout()
@@ -78,7 +82,7 @@ Partial Class FrmServices
         CType(Me.numEstimatedDays, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numUnitPrice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlContent.SuspendLayout()
-        CType(Me.dgvService, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel3
@@ -724,7 +728,7 @@ Partial Class FrmServices
         '
         'pnlContent
         '
-        Me.pnlContent.Controls.Add(Me.dgvService)
+        Me.pnlContent.Controls.Add(Me.Guna2DataGridView1)
         Me.pnlContent.Controls.Add(Me.Guna2HtmlLabel1)
         Me.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlContent.FillColor = System.Drawing.Color.LightSkyBlue
@@ -734,11 +738,11 @@ Partial Class FrmServices
         Me.pnlContent.Size = New System.Drawing.Size(828, 566)
         Me.pnlContent.TabIndex = 13
         '
-        'dgvService
+        'Guna2DataGridView1
         '
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgvService.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvService.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.Guna2DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -746,9 +750,9 @@ Partial Class FrmServices
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvService.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvService.ColumnHeadersHeight = 4
-        Me.dgvService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.Guna2DataGridView1.ColumnHeadersHeight = 4
+        Me.Guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -756,22 +760,22 @@ Partial Class FrmServices
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvService.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvService.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvService.Location = New System.Drawing.Point(15, 366)
-        Me.dgvService.Name = "dgvService"
-        Me.dgvService.RowHeadersVisible = False
-        Me.dgvService.RowHeadersWidth = 62
-        Me.dgvService.RowTemplate.Height = 28
-        Me.dgvService.Size = New System.Drawing.Size(779, 188)
-        Me.dgvService.TabIndex = 12
-        Me.dgvService.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvService.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.dgvService.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvService.ThemeStyle.HeaderStyle.Height = 4
-        Me.dgvService.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvService.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.dgvService.ThemeStyle.RowsStyle.Height = 28
+        Me.Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2DataGridView1.Location = New System.Drawing.Point(15, 366)
+        Me.Guna2DataGridView1.Name = "Guna2DataGridView1"
+        Me.Guna2DataGridView1.RowHeadersVisible = False
+        Me.Guna2DataGridView1.RowHeadersWidth = 62
+        Me.Guna2DataGridView1.RowTemplate.Height = 28
+        Me.Guna2DataGridView1.Size = New System.Drawing.Size(779, 188)
+        Me.Guna2DataGridView1.TabIndex = 12
+        Me.Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.Guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 28
         '
         'Guna2HtmlLabel1
         '
@@ -810,7 +814,7 @@ Partial Class FrmServices
         CType(Me.numUnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlContent.ResumeLayout(False)
         Me.pnlContent.PerformLayout()
-        CType(Me.dgvService, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Guna2DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -839,7 +843,7 @@ Partial Class FrmServices
     Friend WithEvents txtServiceID As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents cmbPricingType As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2ImageButton1 As Guna.UI2.WinForms.Guna2ImageButton
-    Friend WithEvents dgvService As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents pnlSearchService As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents numUnitPrice As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents numEstimatedDays As Guna.UI2.WinForms.Guna2NumericUpDown
