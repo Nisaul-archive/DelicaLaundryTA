@@ -23,10 +23,11 @@ Partial Class FrmPayment
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPayment))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlSidebarServices = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Me.btnAntarJemput = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button7 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2TileButton1 = New Guna.UI2.WinForms.Guna2TileButton()
@@ -37,11 +38,35 @@ Partial Class FrmPayment
         Me.btnMasterCustomer = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.pnlPaymentForm = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Me.lblPaymentSystemStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblTotalPayment = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.dgvPayment = New Guna.UI2.WinForms.Guna2DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel6 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.grpCustomerForm = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.lblPaymentStatusValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.numPaymentAmount = New Guna.UI2.WinForms.Guna2NumericUpDown()
+        Me.txtTotalPaid = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.txtGrandTotal = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.cmbOrderNo = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.cmbPaymentMethod = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.dtpPaymentDate = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.Guna2HtmlLabel9 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.txtCustomerName = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnResetCustomer = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -55,43 +80,18 @@ Partial Class FrmPayment
         Me.txtSearchPayment = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnSearchPayment = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel9 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.dtpPaymentDate = New Guna.UI2.WinForms.Guna2DateTimePicker()
-        Me.cmbPaymentMethod = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.cmbOrderNo = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel14 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.txtGrandTotal = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.txtTotalPaid = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.numPaymentAmount = New Guna.UI2.WinForms.Guna2NumericUpDown()
-        Me.txtRemaining = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.lblPaymentStatusValue = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.dgvPayment = New Guna.UI2.WinForms.Guna2DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblTotalPayment = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.lblPaymentSystemStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.pnlSidebarServices.SuspendLayout()
         Me.pnlPaymentForm.SuspendLayout()
+        CType(Me.dgvPayment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2CustomGradientPanel1.SuspendLayout()
         Me.grpCustomerForm.SuspendLayout()
-        Me.pnlSearchCustomer.SuspendLayout()
         CType(Me.numPaymentAmount, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvPayment, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlSearchCustomer.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlSidebarServices
         '
+        Me.pnlSidebarServices.Controls.Add(Me.btnAntarJemput)
         Me.pnlSidebarServices.Controls.Add(Me.Guna2Button7)
         Me.pnlSidebarServices.Controls.Add(Me.Guna2ImageButton1)
         Me.pnlSidebarServices.Controls.Add(Me.Guna2TileButton1)
@@ -110,6 +110,24 @@ Partial Class FrmPayment
         Me.pnlSidebarServices.Size = New System.Drawing.Size(200, 730)
         Me.pnlSidebarServices.TabIndex = 1
         '
+        'btnAntarJemput
+        '
+        Me.btnAntarJemput.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnAntarJemput.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAntarJemput.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAntarJemput.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAntarJemput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAntarJemput.FillColor = System.Drawing.Color.Transparent
+        Me.btnAntarJemput.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAntarJemput.ForeColor = System.Drawing.Color.White
+        Me.btnAntarJemput.Location = New System.Drawing.Point(0, 444)
+        Me.btnAntarJemput.Name = "btnAntarJemput"
+        Me.btnAntarJemput.PressedColor = System.Drawing.Color.LightSkyBlue
+        Me.btnAntarJemput.Size = New System.Drawing.Size(200, 45)
+        Me.btnAntarJemput.TabIndex = 10
+        Me.btnAntarJemput.Text = "Antar-Jemput"
+        Me.btnAntarJemput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
         'Guna2Button7
         '
         Me.Guna2Button7.BackColor = System.Drawing.Color.CornflowerBlue
@@ -120,7 +138,7 @@ Partial Class FrmPayment
         Me.Guna2Button7.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button7.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button7.Location = New System.Drawing.Point(1, 444)
+        Me.Guna2Button7.Location = New System.Drawing.Point(0, 495)
         Me.Guna2Button7.Name = "Guna2Button7"
         Me.Guna2Button7.PressedColor = System.Drawing.Color.LightSkyBlue
         Me.Guna2Button7.Size = New System.Drawing.Size(200, 45)
@@ -155,7 +173,7 @@ Partial Class FrmPayment
         Me.Guna2TileButton1.FillColor = System.Drawing.Color.White
         Me.Guna2TileButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TileButton1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TileButton1.Location = New System.Drawing.Point(12, 525)
+        Me.Guna2TileButton1.Location = New System.Drawing.Point(11, 594)
         Me.Guna2TileButton1.Name = "Guna2TileButton1"
         Me.Guna2TileButton1.Size = New System.Drawing.Size(180, 45)
         Me.Guna2TileButton1.TabIndex = 6
@@ -287,6 +305,128 @@ Partial Class FrmPayment
         Me.pnlPaymentForm.Size = New System.Drawing.Size(869, 727)
         Me.pnlPaymentForm.TabIndex = 15
         '
+        'lblPaymentSystemStatus
+        '
+        Me.lblPaymentSystemStatus.BackColor = System.Drawing.Color.Transparent
+        Me.lblPaymentSystemStatus.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPaymentSystemStatus.ForeColor = System.Drawing.Color.Black
+        Me.lblPaymentSystemStatus.Location = New System.Drawing.Point(734, 692)
+        Me.lblPaymentSystemStatus.Name = "lblPaymentSystemStatus"
+        Me.lblPaymentSystemStatus.Size = New System.Drawing.Size(87, 23)
+        Me.lblPaymentSystemStatus.TabIndex = 41
+        Me.lblPaymentSystemStatus.Text = "" & Global.Microsoft.VisualBasic.ChrW(9) & "Status: Siap"
+        '
+        'lblTotalPayment
+        '
+        Me.lblTotalPayment.BackColor = System.Drawing.Color.Transparent
+        Me.lblTotalPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalPayment.ForeColor = System.Drawing.Color.Black
+        Me.lblTotalPayment.Location = New System.Drawing.Point(14, 692)
+        Me.lblTotalPayment.Name = "lblTotalPayment"
+        Me.lblTotalPayment.Size = New System.Drawing.Size(94, 23)
+        Me.lblTotalPayment.TabIndex = 40
+        Me.lblTotalPayment.Text = "Total Data: 0"
+        '
+        'dgvPayment
+        '
+        Me.dgvPayment.AllowUserToAddRows = False
+        Me.dgvPayment.AllowUserToDeleteRows = False
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.White
+        Me.dgvPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        Me.dgvPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        Me.dgvPayment.ColumnHeadersHeight = 4
+        Me.dgvPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        Me.dgvPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvPayment.DefaultCellStyle = DataGridViewCellStyle15
+        Me.dgvPayment.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.dgvPayment.Location = New System.Drawing.Point(14, 484)
+        Me.dgvPayment.MultiSelect = False
+        Me.dgvPayment.Name = "dgvPayment"
+        Me.dgvPayment.ReadOnly = True
+        Me.dgvPayment.RowHeadersVisible = False
+        Me.dgvPayment.RowHeadersWidth = 62
+        Me.dgvPayment.RowTemplate.Height = 28
+        Me.dgvPayment.Size = New System.Drawing.Size(832, 206)
+        Me.dgvPayment.TabIndex = 13
+        Me.dgvPayment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
+        Me.dgvPayment.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvPayment.ThemeStyle.HeaderStyle.Height = 4
+        Me.dgvPayment.ThemeStyle.ReadOnly = True
+        Me.dgvPayment.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvPayment.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.dgvPayment.ThemeStyle.RowsStyle.Height = 28
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "No"
+        Me.Column1.MinimumWidth = 8
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "ID Pembayaran"
+        Me.Column2.MinimumWidth = 8
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "No. Pesanan"
+        Me.Column3.MinimumWidth = 8
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Nama Pelanggan"
+        Me.Column4.MinimumWidth = 8
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Tanggal Bayar"
+        Me.Column5.MinimumWidth = 8
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Nominal Bayar"
+        Me.Column6.MinimumWidth = 8
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.HeaderText = "Metode"
+        Me.Column7.MinimumWidth = 8
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.HeaderText = "Status"
+        Me.Column8.MinimumWidth = 8
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        '
         'Guna2CustomGradientPanel1
         '
         Me.Guna2CustomGradientPanel1.Controls.Add(Me.Guna2HtmlLabel1)
@@ -336,12 +476,10 @@ Partial Class FrmPayment
         'grpCustomerForm
         '
         Me.grpCustomerForm.Controls.Add(Me.lblPaymentStatusValue)
-        Me.grpCustomerForm.Controls.Add(Me.txtRemaining)
         Me.grpCustomerForm.Controls.Add(Me.numPaymentAmount)
         Me.grpCustomerForm.Controls.Add(Me.txtTotalPaid)
         Me.grpCustomerForm.Controls.Add(Me.txtGrandTotal)
         Me.grpCustomerForm.Controls.Add(Me.Guna2HtmlLabel14)
-        Me.grpCustomerForm.Controls.Add(Me.Guna2HtmlLabel13)
         Me.grpCustomerForm.Controls.Add(Me.Guna2HtmlLabel12)
         Me.grpCustomerForm.Controls.Add(Me.Guna2HtmlLabel11)
         Me.grpCustomerForm.Controls.Add(Me.Guna2HtmlLabel7)
@@ -366,6 +504,186 @@ Partial Class FrmPayment
         Me.grpCustomerForm.Size = New System.Drawing.Size(831, 303)
         Me.grpCustomerForm.TabIndex = 10
         Me.grpCustomerForm.Text = "Form Data Layanan"
+        '
+        'lblPaymentStatusValue
+        '
+        Me.lblPaymentStatusValue.AutoSize = False
+        Me.lblPaymentStatusValue.BackColor = System.Drawing.Color.LightGreen
+        Me.lblPaymentStatusValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lblPaymentStatusValue.Font = New System.Drawing.Font("Segoe UI", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPaymentStatusValue.ForeColor = System.Drawing.Color.DarkGreen
+        Me.lblPaymentStatusValue.Location = New System.Drawing.Point(585, 165)
+        Me.lblPaymentStatusValue.Name = "lblPaymentStatusValue"
+        Me.lblPaymentStatusValue.Size = New System.Drawing.Size(145, 32)
+        Me.lblPaymentStatusValue.TabIndex = 39
+        Me.lblPaymentStatusValue.Text = "Belum Dibayar"
+        Me.lblPaymentStatusValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'numPaymentAmount
+        '
+        Me.numPaymentAmount.BackColor = System.Drawing.Color.Transparent
+        Me.numPaymentAmount.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.numPaymentAmount.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.numPaymentAmount.Location = New System.Drawing.Point(585, 121)
+        Me.numPaymentAmount.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.numPaymentAmount.Maximum = New Decimal(New Integer() {999999999, 0, 0, 0})
+        Me.numPaymentAmount.Name = "numPaymentAmount"
+        Me.numPaymentAmount.Size = New System.Drawing.Size(220, 36)
+        Me.numPaymentAmount.TabIndex = 37
+        '
+        'txtTotalPaid
+        '
+        Me.txtTotalPaid.BorderColor = System.Drawing.Color.Navy
+        Me.txtTotalPaid.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTotalPaid.DefaultText = ""
+        Me.txtTotalPaid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtTotalPaid.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtTotalPaid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtTotalPaid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtTotalPaid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtTotalPaid.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.txtTotalPaid.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtTotalPaid.Location = New System.Drawing.Point(585, 87)
+        Me.txtTotalPaid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtTotalPaid.Name = "txtTotalPaid"
+        Me.txtTotalPaid.PlaceholderForeColor = System.Drawing.Color.White
+        Me.txtTotalPaid.PlaceholderText = ""
+        Me.txtTotalPaid.ReadOnly = True
+        Me.txtTotalPaid.SelectedText = ""
+        Me.txtTotalPaid.Size = New System.Drawing.Size(220, 29)
+        Me.txtTotalPaid.TabIndex = 36
+        '
+        'txtGrandTotal
+        '
+        Me.txtGrandTotal.BorderColor = System.Drawing.Color.Navy
+        Me.txtGrandTotal.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtGrandTotal.DefaultText = ""
+        Me.txtGrandTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtGrandTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtGrandTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtGrandTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtGrandTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtGrandTotal.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.txtGrandTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtGrandTotal.Location = New System.Drawing.Point(585, 49)
+        Me.txtGrandTotal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtGrandTotal.Name = "txtGrandTotal"
+        Me.txtGrandTotal.PlaceholderForeColor = System.Drawing.Color.White
+        Me.txtGrandTotal.PlaceholderText = ""
+        Me.txtGrandTotal.ReadOnly = True
+        Me.txtGrandTotal.SelectedText = ""
+        Me.txtGrandTotal.Size = New System.Drawing.Size(220, 29)
+        Me.txtGrandTotal.TabIndex = 35
+        '
+        'Guna2HtmlLabel14
+        '
+        Me.Guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel14.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel14.ForeColor = System.Drawing.Color.Black
+        Me.Guna2HtmlLabel14.Location = New System.Drawing.Point(416, 170)
+        Me.Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
+        Me.Guna2HtmlLabel14.Size = New System.Drawing.Size(141, 23)
+        Me.Guna2HtmlLabel14.TabIndex = 34
+        Me.Guna2HtmlLabel14.Text = "Status Pembayaran"
+        '
+        'Guna2HtmlLabel12
+        '
+        Me.Guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel12.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black
+        Me.Guna2HtmlLabel12.Location = New System.Drawing.Point(416, 125)
+        Me.Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
+        Me.Guna2HtmlLabel12.Size = New System.Drawing.Size(157, 23)
+        Me.Guna2HtmlLabel12.TabIndex = 32
+        Me.Guna2HtmlLabel12.Text = "Nominal Pembayaran"
+        '
+        'Guna2HtmlLabel11
+        '
+        Me.Guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel11.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black
+        Me.Guna2HtmlLabel11.Location = New System.Drawing.Point(416, 87)
+        Me.Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
+        Me.Guna2HtmlLabel11.Size = New System.Drawing.Size(99, 23)
+        Me.Guna2HtmlLabel11.TabIndex = 31
+        Me.Guna2HtmlLabel11.Text = "Total Dibayar"
+        '
+        'Guna2HtmlLabel7
+        '
+        Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black
+        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(416, 54)
+        Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
+        Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(101, 23)
+        Me.Guna2HtmlLabel7.TabIndex = 30
+        Me.Guna2HtmlLabel7.Text = "Total Tagihan"
+        '
+        'cmbOrderNo
+        '
+        Me.cmbOrderNo.BackColor = System.Drawing.Color.Transparent
+        Me.cmbOrderNo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbOrderNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbOrderNo.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbOrderNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbOrderNo.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbOrderNo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmbOrderNo.ItemHeight = 30
+        Me.cmbOrderNo.Location = New System.Drawing.Point(171, 80)
+        Me.cmbOrderNo.Name = "cmbOrderNo"
+        Me.cmbOrderNo.Size = New System.Drawing.Size(220, 36)
+        Me.cmbOrderNo.TabIndex = 29
+        '
+        'cmbPaymentMethod
+        '
+        Me.cmbPaymentMethod.BackColor = System.Drawing.Color.Transparent
+        Me.cmbPaymentMethod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cmbPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbPaymentMethod.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbPaymentMethod.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.cmbPaymentMethod.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.cmbPaymentMethod.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.cmbPaymentMethod.ItemHeight = 30
+        Me.cmbPaymentMethod.Location = New System.Drawing.Point(171, 196)
+        Me.cmbPaymentMethod.Name = "cmbPaymentMethod"
+        Me.cmbPaymentMethod.Size = New System.Drawing.Size(220, 36)
+        Me.cmbPaymentMethod.TabIndex = 28
+        '
+        'dtpPaymentDate
+        '
+        Me.dtpPaymentDate.Checked = True
+        Me.dtpPaymentDate.FillColor = System.Drawing.Color.White
+        Me.dtpPaymentDate.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.dtpPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpPaymentDate.Location = New System.Drawing.Point(171, 154)
+        Me.dtpPaymentDate.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.dtpPaymentDate.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.dtpPaymentDate.Name = "dtpPaymentDate"
+        Me.dtpPaymentDate.Size = New System.Drawing.Size(220, 36)
+        Me.dtpPaymentDate.TabIndex = 27
+        Me.dtpPaymentDate.Value = New Date(2026, 11, 12, 17, 42, 21, 966)
+        '
+        'Guna2HtmlLabel9
+        '
+        Me.Guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel9.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black
+        Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(11, 195)
+        Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
+        Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(155, 23)
+        Me.Guna2HtmlLabel9.TabIndex = 24
+        Me.Guna2HtmlLabel9.Text = "Metode Pembayaran"
+        '
+        'Guna2HtmlLabel2
+        '
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(11, 161)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(105, 23)
+        Me.Guna2HtmlLabel2.TabIndex = 23
+        Me.Guna2HtmlLabel2.Text = "Tanggal Bayar"
         '
         'txtCustomerName
         '
@@ -413,7 +731,6 @@ Partial Class FrmPayment
         Me.btnResetCustomer.FillColor2 = System.Drawing.Color.LightGray
         Me.btnResetCustomer.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnResetCustomer.ForeColor = System.Drawing.Color.Black
-        Me.btnResetCustomer.Image = CType(resources.GetObject("btnResetCustomer.Image"), System.Drawing.Image)
         Me.btnResetCustomer.Location = New System.Drawing.Point(630, 252)
         Me.btnResetCustomer.Name = "btnResetCustomer"
         Me.btnResetCustomer.Size = New System.Drawing.Size(135, 45)
@@ -433,7 +750,6 @@ Partial Class FrmPayment
         Me.btnDeleteCustomer.FillColor2 = System.Drawing.Color.Red
         Me.btnDeleteCustomer.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDeleteCustomer.ForeColor = System.Drawing.Color.Black
-        Me.btnDeleteCustomer.Image = CType(resources.GetObject("btnDeleteCustomer.Image"), System.Drawing.Image)
         Me.btnDeleteCustomer.Location = New System.Drawing.Point(489, 252)
         Me.btnDeleteCustomer.Name = "btnDeleteCustomer"
         Me.btnDeleteCustomer.Size = New System.Drawing.Size(135, 45)
@@ -453,7 +769,6 @@ Partial Class FrmPayment
         Me.btnUpdateCustomer.FillColor2 = System.Drawing.Color.DodgerBlue
         Me.btnUpdateCustomer.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdateCustomer.ForeColor = System.Drawing.Color.Black
-        Me.btnUpdateCustomer.Image = CType(resources.GetObject("btnUpdateCustomer.Image"), System.Drawing.Image)
         Me.btnUpdateCustomer.ImageOffset = New System.Drawing.Point(-2, 0)
         Me.btnUpdateCustomer.Location = New System.Drawing.Point(348, 252)
         Me.btnUpdateCustomer.Name = "btnUpdateCustomer"
@@ -475,7 +790,6 @@ Partial Class FrmPayment
         Me.btnSaveCustomer.FillColor2 = System.Drawing.Color.Chartreuse
         Me.btnSaveCustomer.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSaveCustomer.ForeColor = System.Drawing.Color.Black
-        Me.btnSaveCustomer.Image = CType(resources.GetObject("btnSaveCustomer.Image"), System.Drawing.Image)
         Me.btnSaveCustomer.Location = New System.Drawing.Point(207, 252)
         Me.btnSaveCustomer.Name = "btnSaveCustomer"
         Me.btnSaveCustomer.Size = New System.Drawing.Size(135, 45)
@@ -589,341 +903,6 @@ Partial Class FrmPayment
         Me.btnSearchPayment.Text = "Cari"
         Me.btnSearchPayment.TextOffset = New System.Drawing.Point(0, -2)
         '
-        'Guna2HtmlLabel2
-        '
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(11, 161)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(105, 23)
-        Me.Guna2HtmlLabel2.TabIndex = 23
-        Me.Guna2HtmlLabel2.Text = "Tanggal Bayar"
-        '
-        'Guna2HtmlLabel9
-        '
-        Me.Guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel9.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel9.Location = New System.Drawing.Point(11, 195)
-        Me.Guna2HtmlLabel9.Name = "Guna2HtmlLabel9"
-        Me.Guna2HtmlLabel9.Size = New System.Drawing.Size(155, 23)
-        Me.Guna2HtmlLabel9.TabIndex = 24
-        Me.Guna2HtmlLabel9.Text = "Metode Pembayaran"
-        '
-        'dtpPaymentDate
-        '
-        Me.dtpPaymentDate.Checked = True
-        Me.dtpPaymentDate.FillColor = System.Drawing.Color.White
-        Me.dtpPaymentDate.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.dtpPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpPaymentDate.Location = New System.Drawing.Point(171, 154)
-        Me.dtpPaymentDate.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.dtpPaymentDate.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.dtpPaymentDate.Name = "dtpPaymentDate"
-        Me.dtpPaymentDate.Size = New System.Drawing.Size(220, 36)
-        Me.dtpPaymentDate.TabIndex = 27
-        Me.dtpPaymentDate.Value = New Date(2026, 11, 12, 17, 42, 21, 966)
-        '
-        'cmbPaymentMethod
-        '
-        Me.cmbPaymentMethod.BackColor = System.Drawing.Color.Transparent
-        Me.cmbPaymentMethod.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmbPaymentMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbPaymentMethod.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbPaymentMethod.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbPaymentMethod.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbPaymentMethod.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cmbPaymentMethod.ItemHeight = 30
-        Me.cmbPaymentMethod.Location = New System.Drawing.Point(171, 196)
-        Me.cmbPaymentMethod.Name = "cmbPaymentMethod"
-        Me.cmbPaymentMethod.Size = New System.Drawing.Size(220, 36)
-        Me.cmbPaymentMethod.TabIndex = 28
-        '
-        'cmbOrderNo
-        '
-        Me.cmbOrderNo.BackColor = System.Drawing.Color.Transparent
-        Me.cmbOrderNo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cmbOrderNo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbOrderNo.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbOrderNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cmbOrderNo.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.cmbOrderNo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.cmbOrderNo.ItemHeight = 30
-        Me.cmbOrderNo.Location = New System.Drawing.Point(171, 80)
-        Me.cmbOrderNo.Name = "cmbOrderNo"
-        Me.cmbOrderNo.Size = New System.Drawing.Size(220, 36)
-        Me.cmbOrderNo.TabIndex = 29
-        '
-        'Guna2HtmlLabel7
-        '
-        Me.Guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel7.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel7.Location = New System.Drawing.Point(416, 54)
-        Me.Guna2HtmlLabel7.Name = "Guna2HtmlLabel7"
-        Me.Guna2HtmlLabel7.Size = New System.Drawing.Size(107, 23)
-        Me.Guna2HtmlLabel7.TabIndex = 30
-        Me.Guna2HtmlLabel7.Text = "Total Tafgihan"
-        '
-        'Guna2HtmlLabel11
-        '
-        Me.Guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel11.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel11.Location = New System.Drawing.Point(416, 87)
-        Me.Guna2HtmlLabel11.Name = "Guna2HtmlLabel11"
-        Me.Guna2HtmlLabel11.Size = New System.Drawing.Size(99, 23)
-        Me.Guna2HtmlLabel11.TabIndex = 31
-        Me.Guna2HtmlLabel11.Text = "Total Dibayar"
-        '
-        'Guna2HtmlLabel12
-        '
-        Me.Guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel12.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel12.Location = New System.Drawing.Point(416, 125)
-        Me.Guna2HtmlLabel12.Name = "Guna2HtmlLabel12"
-        Me.Guna2HtmlLabel12.Size = New System.Drawing.Size(157, 23)
-        Me.Guna2HtmlLabel12.TabIndex = 32
-        Me.Guna2HtmlLabel12.Text = "Nominal Pembayaran"
-        '
-        'Guna2HtmlLabel13
-        '
-        Me.Guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel13.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel13.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel13.Location = New System.Drawing.Point(416, 161)
-        Me.Guna2HtmlLabel13.Name = "Guna2HtmlLabel13"
-        Me.Guna2HtmlLabel13.Size = New System.Drawing.Size(92, 23)
-        Me.Guna2HtmlLabel13.TabIndex = 33
-        Me.Guna2HtmlLabel13.Text = "Sisa Tagihan"
-        '
-        'Guna2HtmlLabel14
-        '
-        Me.Guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel14.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel14.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel14.Location = New System.Drawing.Point(416, 196)
-        Me.Guna2HtmlLabel14.Name = "Guna2HtmlLabel14"
-        Me.Guna2HtmlLabel14.Size = New System.Drawing.Size(141, 23)
-        Me.Guna2HtmlLabel14.TabIndex = 34
-        Me.Guna2HtmlLabel14.Text = "Status Pembayaran"
-        '
-        'txtGrandTotal
-        '
-        Me.txtGrandTotal.BorderColor = System.Drawing.Color.Navy
-        Me.txtGrandTotal.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtGrandTotal.DefaultText = ""
-        Me.txtGrandTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtGrandTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtGrandTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtGrandTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtGrandTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtGrandTotal.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.txtGrandTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtGrandTotal.Location = New System.Drawing.Point(585, 49)
-        Me.txtGrandTotal.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtGrandTotal.Name = "txtGrandTotal"
-        Me.txtGrandTotal.PlaceholderForeColor = System.Drawing.Color.White
-        Me.txtGrandTotal.PlaceholderText = ""
-        Me.txtGrandTotal.ReadOnly = True
-        Me.txtGrandTotal.SelectedText = ""
-        Me.txtGrandTotal.Size = New System.Drawing.Size(220, 29)
-        Me.txtGrandTotal.TabIndex = 35
-        '
-        'txtTotalPaid
-        '
-        Me.txtTotalPaid.BorderColor = System.Drawing.Color.Navy
-        Me.txtTotalPaid.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtTotalPaid.DefaultText = ""
-        Me.txtTotalPaid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtTotalPaid.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtTotalPaid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtTotalPaid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtTotalPaid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtTotalPaid.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.txtTotalPaid.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtTotalPaid.Location = New System.Drawing.Point(585, 87)
-        Me.txtTotalPaid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtTotalPaid.Name = "txtTotalPaid"
-        Me.txtTotalPaid.PlaceholderForeColor = System.Drawing.Color.White
-        Me.txtTotalPaid.PlaceholderText = ""
-        Me.txtTotalPaid.ReadOnly = True
-        Me.txtTotalPaid.SelectedText = ""
-        Me.txtTotalPaid.Size = New System.Drawing.Size(220, 29)
-        Me.txtTotalPaid.TabIndex = 36
-        '
-        'numPaymentAmount
-        '
-        Me.numPaymentAmount.BackColor = System.Drawing.Color.Transparent
-        Me.numPaymentAmount.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.numPaymentAmount.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.numPaymentAmount.Location = New System.Drawing.Point(585, 121)
-        Me.numPaymentAmount.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.numPaymentAmount.Maximum = New Decimal(New Integer() {999999999, 0, 0, 0})
-        Me.numPaymentAmount.Name = "numPaymentAmount"
-        Me.numPaymentAmount.Size = New System.Drawing.Size(220, 36)
-        Me.numPaymentAmount.TabIndex = 37
-        '
-        'txtRemaining
-        '
-        Me.txtRemaining.BorderColor = System.Drawing.Color.Navy
-        Me.txtRemaining.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtRemaining.DefaultText = ""
-        Me.txtRemaining.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtRemaining.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtRemaining.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtRemaining.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtRemaining.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtRemaining.Font = New System.Drawing.Font("Segoe UI", 8.0!)
-        Me.txtRemaining.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtRemaining.Location = New System.Drawing.Point(585, 161)
-        Me.txtRemaining.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.txtRemaining.Name = "txtRemaining"
-        Me.txtRemaining.PlaceholderForeColor = System.Drawing.Color.White
-        Me.txtRemaining.PlaceholderText = ""
-        Me.txtRemaining.ReadOnly = True
-        Me.txtRemaining.SelectedText = ""
-        Me.txtRemaining.Size = New System.Drawing.Size(220, 29)
-        Me.txtRemaining.TabIndex = 38
-        '
-        'lblPaymentStatusValue
-        '
-        Me.lblPaymentStatusValue.AutoSize = False
-        Me.lblPaymentStatusValue.BackColor = System.Drawing.Color.LightGreen
-        Me.lblPaymentStatusValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lblPaymentStatusValue.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPaymentStatusValue.ForeColor = System.Drawing.Color.DarkGreen
-        Me.lblPaymentStatusValue.Location = New System.Drawing.Point(585, 199)
-        Me.lblPaymentStatusValue.Name = "lblPaymentStatusValue"
-        Me.lblPaymentStatusValue.Size = New System.Drawing.Size(145, 32)
-        Me.lblPaymentStatusValue.TabIndex = 39
-        Me.lblPaymentStatusValue.Text = "" & Global.Microsoft.VisualBasic.ChrW(9) & "Belum Dibayar"
-        Me.lblPaymentStatusValue.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'dgvPayment
-        '
-        Me.dgvPayment.AllowUserToAddRows = False
-        Me.dgvPayment.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgvPayment.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvPayment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvPayment.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvPayment.ColumnHeadersHeight = 4
-        Me.dgvPayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Me.dgvPayment.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvPayment.DefaultCellStyle = DataGridViewCellStyle3
-        Me.dgvPayment.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.dgvPayment.Location = New System.Drawing.Point(14, 484)
-        Me.dgvPayment.MultiSelect = False
-        Me.dgvPayment.Name = "dgvPayment"
-        Me.dgvPayment.ReadOnly = True
-        Me.dgvPayment.RowHeadersVisible = False
-        Me.dgvPayment.RowHeadersWidth = 62
-        Me.dgvPayment.RowTemplate.Height = 28
-        Me.dgvPayment.Size = New System.Drawing.Size(832, 206)
-        Me.dgvPayment.TabIndex = 13
-        Me.dgvPayment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
-        Me.dgvPayment.ThemeStyle.HeaderStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvPayment.ThemeStyle.HeaderStyle.Height = 4
-        Me.dgvPayment.ThemeStyle.ReadOnly = True
-        Me.dgvPayment.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvPayment.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.dgvPayment.ThemeStyle.RowsStyle.Height = 28
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "No"
-        Me.Column1.MinimumWidth = 8
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "ID Pembayaran"
-        Me.Column2.MinimumWidth = 8
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "No. Pesanan"
-        Me.Column3.MinimumWidth = 8
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Nama Pelanggan"
-        Me.Column4.MinimumWidth = 8
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Tanggal Bayar"
-        Me.Column5.MinimumWidth = 8
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Nominal Bayar"
-        Me.Column6.MinimumWidth = 8
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Metode"
-        Me.Column7.MinimumWidth = 8
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        '
-        'Column8
-        '
-        Me.Column8.HeaderText = "Status"
-        Me.Column8.MinimumWidth = 8
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        '
-        'lblTotalPayment
-        '
-        Me.lblTotalPayment.BackColor = System.Drawing.Color.Transparent
-        Me.lblTotalPayment.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalPayment.ForeColor = System.Drawing.Color.Black
-        Me.lblTotalPayment.Location = New System.Drawing.Point(14, 692)
-        Me.lblTotalPayment.Name = "lblTotalPayment"
-        Me.lblTotalPayment.Size = New System.Drawing.Size(94, 23)
-        Me.lblTotalPayment.TabIndex = 40
-        Me.lblTotalPayment.Text = "Total Data: 0"
-        '
-        'lblPaymentSystemStatus
-        '
-        Me.lblPaymentSystemStatus.BackColor = System.Drawing.Color.Transparent
-        Me.lblPaymentSystemStatus.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPaymentSystemStatus.ForeColor = System.Drawing.Color.Black
-        Me.lblPaymentSystemStatus.Location = New System.Drawing.Point(734, 692)
-        Me.lblPaymentSystemStatus.Name = "lblPaymentSystemStatus"
-        Me.lblPaymentSystemStatus.Size = New System.Drawing.Size(87, 23)
-        Me.lblPaymentSystemStatus.TabIndex = 41
-        Me.lblPaymentSystemStatus.Text = "" & Global.Microsoft.VisualBasic.ChrW(9) & "Status: Siap"
-        '
         'FrmPayment
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -936,14 +915,14 @@ Partial Class FrmPayment
         Me.pnlSidebarServices.ResumeLayout(False)
         Me.pnlPaymentForm.ResumeLayout(False)
         Me.pnlPaymentForm.PerformLayout()
+        CType(Me.dgvPayment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2CustomGradientPanel1.ResumeLayout(False)
         Me.Guna2CustomGradientPanel1.PerformLayout()
         Me.grpCustomerForm.ResumeLayout(False)
         Me.grpCustomerForm.PerformLayout()
+        CType(Me.numPaymentAmount, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlSearchCustomer.ResumeLayout(False)
         Me.pnlSearchCustomer.PerformLayout()
-        CType(Me.numPaymentAmount, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvPayment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -985,13 +964,11 @@ Partial Class FrmPayment
     Friend WithEvents Guna2HtmlLabel11 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents cmbOrderNo As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Guna2HtmlLabel13 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel14 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents txtGrandTotal As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtTotalPaid As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents numPaymentAmount As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents lblPaymentStatusValue As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents txtRemaining As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents dgvPayment As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
@@ -1003,4 +980,5 @@ Partial Class FrmPayment
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents lblPaymentSystemStatus As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents lblTotalPayment As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnAntarJemput As Guna.UI2.WinForms.Guna2Button
 End Class

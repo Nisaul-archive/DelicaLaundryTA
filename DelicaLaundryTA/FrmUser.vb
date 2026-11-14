@@ -10,42 +10,38 @@ Public Class FrmUser
     ' ==========================================
     Private Sub FrmUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            If Sesi.UserRole <> "Owner" Then
-                MessageBox.Show("Hanya Owner yang dapat mengelola pengguna.",
-                                "Hak Akses", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Me.BeginInvoke(New Action(Sub()
-                                               FrmServices.Show()
-                                               Me.Close()
-                                           End Sub))
-                Return
-            End If
+            'f Sesi.UserRole <> "Owner" Then
+            'MessageBox.Show("Hanya Owner yang dapat mengelola pengguna.",
+            '                      "Hak Akses", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            'Me.BeginInvoke(New Action(Sub()
+            'FrmServices.Show()
+            'Me.Close()
+            'End Sub))
+            '       Return
+            '      End If
 
             txtUserID.ReadOnly = True
-            txtUserID.TabStop = False
-            txtPassword.UseSystemPasswordChar = True
+                                              txtUserID.TabStop = False
+                                              txtPassword.UseSystemPasswordChar = True
 
-            dgvUser.Columns.Clear()
-            dgvUser.AutoGenerateColumns = True
-            dgvUser.ReadOnly = True
-            dgvUser.AllowUserToAddRows = False
-            dgvUser.AllowUserToDeleteRows = False
-            dgvUser.MultiSelect = False
-            dgvUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-            dgvUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-            dgvUser.RowHeadersVisible = False
+                                              dgvUser.Columns.Clear()
+                                              dgvUser.AutoGenerateColumns = True
+                                              dgvUser.ReadOnly = True
+                                              dgvUser.AllowUserToAddRows = False
+                                              dgvUser.AllowUserToDeleteRows = False
+                                              dgvUser.MultiSelect = False
+                                              dgvUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                                              dgvUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+                                              dgvUser.RowHeadersVisible = False
 
-            cmbRole.Items.Clear()
-            cmbRole.Items.Add("Owner")
-            cmbRole.Items.Add("Staff Laundry")
-            cmbRole.DropDownStyle = ComboBoxStyle.DropDownList
+                                              cmbUserStatus.Items.Clear()
+                                              cmbUserStatus.Items.Add("Aktif")
+                                              cmbUserStatus.Items.Add("Tidak Aktif")
+                                              cmbUserStatus.DropDownStyle = ComboBoxStyle.DropDownList
 
-            cmbUserStatus.Items.Clear()
-            cmbUserStatus.Items.Add("Aktif")
-            cmbUserStatus.Items.Add("Tidak Aktif")
-            cmbUserStatus.DropDownStyle = ComboBoxStyle.DropDownList
-
-            LoadUsers()
-            ResetUser()
+                                              LoadUsers()
+                                              ResetUser()
+                                              LoadRole()
 
         Catch ex As Exception
             TampilkanError("Gagal menyiapkan Form Master Pengguna", ex)
@@ -89,43 +85,116 @@ Public Class FrmUser
     ' TAMPIL DATA PENGGUNA INTERNAL
     ' Customer web tidak ditampilkan di form ini.
     ' ==========================================
+
     Private Sub LoadUsers(Optional keyword As String = "")
+
         Try
+
             Using conn As MySqlConnection = GetConnection()
+
                 conn.Open()
 
                 Dim sql As String =
-                    "SELECT user_id AS ID, " &
-                    "CONCAT('USR-',LPAD(user_id,3,'0')) AS `ID Pengguna`, " &
-                    "full_name AS `Nama Lengkap`, username AS `Username`, " &
-                    "role AS `Role`, IF(is_active=1,'Aktif','Tidak Aktif') AS `Status` " &
-                    "FROM users " &
-                    "WHERE role IN ('Owner','Staff Laundry') " &
-                    "AND (full_name LIKE @q OR username LIKE @q " &
-                    "OR role LIKE @q OR CAST(user_id AS CHAR) LIKE @q) " &
-                    "ORDER BY user_id"
+                "SELECT user_id AS ID, " &
+                "CONCAT('USR-',LPAD(user_id,3,'0')) AS `ID Pengguna`, " &
+                "full_name AS `Nama Lengkap`, " &
+                "username AS `Username`, " &
+                "role AS `Role`, " &
+                "IF(is_active=1,'Aktif','Tidak Aktif') AS `Status` " &
+                "FROM users " &
+                "WHERE (full_name LIKE @q OR username LIKE @q " &
+                "OR role LIKE @q OR CAST(user_id AS CHAR) LIKE @q) " &
+                "ORDER BY user_id ASC"
 
                 Using cmd As New MySqlCommand(sql, conn)
+
                     cmd.Parameters.Add("@q", MySqlDbType.VarChar).Value =
-                        "%" & keyword.Trim() & "%"
+                    "%" & keyword.Trim() & "%"
 
                     Using da As New MySqlDataAdapter(cmd)
+
                         Dim tabel As New DataTable()
+
                         da.Fill(tabel)
+
                         dgvUser.DataSource = tabel
 
                         If dgvUser.Columns.Contains("ID") Then
                             dgvUser.Columns("ID").Visible = False
                         End If
+
                     End Using
+
                 End Using
+
             End Using
 
             dgvUser.ClearSelection()
 
         Catch ex As Exception
+
             TampilkanError("Gagal memuat data pengguna", ex)
+
         End Try
+
+    End Sub
+
+    Private Sub LoadRole()
+
+        Try
+
+            cmbRole.Items.Clear()
+
+            Using conn As MySqlConnection = DbDelica.GetConnection()
+
+                conn.Open()
+
+                Dim sql As String =
+                    "SHOW COLUMNS FROM users LIKE 'role'"
+
+                Using cmd As New MySqlCommand(sql, conn)
+
+                    Using dr As MySqlDataReader = cmd.ExecuteReader()
+
+                        If dr.Read() Then
+
+                            Dim enumDefinition As String =
+                                dr("Type").ToString()
+
+                            Dim matches =
+                                System.Text.RegularExpressions.Regex.Matches(
+                                    enumDefinition,
+                                    "'((?:[^']|'')*)'")
+
+                            For Each item As System.Text.RegularExpressions.Match _
+                                In matches
+
+                                cmbRole.Items.Add(
+                                    item.Groups(1).Value.Replace("''", "'"))
+
+                            Next
+
+                        End If
+
+                    End Using
+
+                End Using
+
+            End Using
+
+            cmbRole.DropDownStyle = ComboBoxStyle.DropDownList
+            cmbRole.SelectedIndex = -1
+
+        Catch ex As Exception
+
+            MessageBox.Show(
+                "Gagal memuat role pengguna: " & ex.Message,
+                "Kesalahan",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error)
+
+        End Try
+
     End Sub
 
     ' ==========================================
@@ -180,45 +249,69 @@ Public Class FrmUser
     ' SIMPAN PENGGUNA BARU
     ' ==========================================
     Private Sub btnSaveUser_Click(sender As Object, e As EventArgs) Handles btnSaveUser.Click
+
         If selectedUserId <> 0 Then
-            MessageBox.Show("Data lama sedang dipilih. Klik Edit atau Reset terlebih dahulu.")
+            MessageBox.Show(
+                "Data lama sedang dipilih. Klik Edit atau Reset terlebih dahulu.")
             Return
         End If
 
         If Not ValidasiUser(True) Then Return
 
         Try
-            Dim hash As String = BCrypt.Net.BCrypt.HashPassword(txtPassword.Text)
+
+            ' Password disimpan langsung tanpa BCrypt
+            Dim password As String = txtPassword.Text
 
             Using conn As MySqlConnection = GetConnection()
+
                 conn.Open()
 
-                ' Jangan masukkan customer_id. Form ini membuat akun Owner/Staff.
                 Const sql As String =
-                    "INSERT INTO users(full_name, username, password_hash, role, is_active) " &
-                    "VALUES(@name, @username, @hash, @role, @active)"
+                    "INSERT INTO users " &
+                    "(full_name, username, password, role, is_active) " &
+                    "VALUES (@name, @username, @password, @role, @active)"
 
                 Using cmd As New MySqlCommand(sql, conn)
+
                     TambahkanParameterUser(cmd)
-                    cmd.Parameters.Add("@hash", MySqlDbType.VarChar, 255).Value = hash
+
+                    cmd.Parameters.Add(
+                        "@password",
+                        MySqlDbType.VarChar, 255).Value = password
+
                     cmd.ExecuteNonQuery()
 
                     Dim idFinal As Long = cmd.LastInsertedId
-                    MessageBox.Show("Pengguna berhasil disimpan dengan ID USR-" &
-                                    idFinal.ToString("D3"), "Berhasil",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    MessageBox.Show(
+                        "Pengguna berhasil disimpan dengan ID USR-" &
+                        idFinal.ToString("D3"),
+                        "Berhasil",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information)
+
                 End Using
+
             End Using
 
             LoadUsers(txtSearchUser.Text)
             ResetUser()
 
         Catch ex As MySqlException When ex.Number = 1062
-            MessageBox.Show("Username sudah digunakan. Silakan gunakan username lain.",
-                            "Username Duplikat", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+            MessageBox.Show(
+                "Username sudah digunakan. Silakan gunakan username lain.",
+                "Username Duplikat",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning)
+
         Catch ex As Exception
+
             TampilkanError("Gagal menyimpan pengguna", ex)
+
         End Try
+
     End Sub
 
     ' ==========================================
@@ -227,62 +320,104 @@ Public Class FrmUser
     ' Password diisi = hash password diperbarui.
     ' ==========================================
     Private Sub btnUpdateUser_Click(sender As Object, e As EventArgs) Handles btnUpdateUser.Click
+
         If selectedUserId = 0 Then
             MessageBox.Show("Pilih pengguna dari tabel terlebih dahulu.")
             Return
         End If
 
         If selectedUserId = Sesi.UserID Then
-            MessageBox.Show("Akun yang sedang digunakan tidak dapat diubah melalui form ini.")
+            MessageBox.Show(
+            "Akun yang sedang digunakan tidak dapat diubah melalui form ini.")
             Return
         End If
 
         If Not ValidasiUser(False) Then Return
 
         Try
+
             Using conn As MySqlConnection = GetConnection()
+
                 conn.Open()
 
                 Dim sql As String
 
+                ' Jika password kosong, password lama tetap digunakan
                 If txtPassword.Text.Trim() = "" Then
+
                     sql =
-                        "UPDATE users SET full_name=@name, username=@username, " &
-                        "role=@role, is_active=@active WHERE user_id=@id"
+                    "UPDATE users SET " &
+                    "full_name=@name, " &
+                    "username=@username, " &
+                    "role=@role, " &
+                    "is_active=@active " &
+                    "WHERE user_id=@id"
+
                 Else
+
+                    ' Jika password diisi, perbarui password
                     sql =
-                        "UPDATE users SET full_name=@name, username=@username, " &
-                        "password_hash=@hash, role=@role, is_active=@active WHERE user_id=@id"
+                    "UPDATE users SET " &
+                    "full_name=@name, " &
+                    "username=@username, " &
+                    "password=@password, " &
+                    "role=@role, " &
+                    "is_active=@active " &
+                    "WHERE user_id=@id"
+
                 End If
 
                 Using cmd As New MySqlCommand(sql, conn)
+
                     TambahkanParameterUser(cmd)
 
                     If txtPassword.Text.Trim() <> "" Then
-                        Dim hash As String = BCrypt.Net.BCrypt.HashPassword(txtPassword.Text)
-                        cmd.Parameters.Add("@hash", MySqlDbType.VarChar, 255).Value = hash
+
+                        cmd.Parameters.Add(
+                        "@password",
+                        MySqlDbType.VarChar, 255).Value =
+                        txtPassword.Text
+
                     End If
 
-                    cmd.Parameters.Add("@id", MySqlDbType.UInt32).Value = selectedUserId
+                    cmd.Parameters.Add(
+                    "@id",
+                    MySqlDbType.UInt32).Value = selectedUserId
 
                     Dim jumlah As Integer = cmd.ExecuteNonQuery()
+
                     If jumlah = 0 Then
-                        MessageBox.Show("Pengguna tidak ditemukan atau tidak ada perubahan.")
+
+                        MessageBox.Show(
+                        "Pengguna tidak ditemukan atau tidak ada perubahan.")
+
                     Else
-                        MessageBox.Show("Data pengguna berhasil diperbarui.")
+
+                        MessageBox.Show(
+                        "Data pengguna berhasil diperbarui.")
+
                     End If
+
                 End Using
+
             End Using
 
             LoadUsers(txtSearchUser.Text)
             ResetUser()
 
         Catch ex As MySqlException When ex.Number = 1062
-            MessageBox.Show("Username sudah digunakan oleh pengguna lain.")
+
+            MessageBox.Show(
+            "Username sudah digunakan oleh pengguna lain.")
+
         Catch ex As Exception
+
             TampilkanError("Gagal mengubah pengguna", ex)
+
         End Try
+
     End Sub
+
 
     ' ==========================================
     ' HAPUS PENGGUNA
@@ -411,6 +546,17 @@ Public Class FrmUser
 
     Private Sub btnMasterCustomer_Click(sender As Object, e As EventArgs) Handles btnMasterCustomer.Click
         FrmCustomer.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
+        FrmOrder.Show()
+        Me.Hide()
+    End Sub
+
+    ' Navigasi Pembayaran
+    Private Sub Guna2Button6_Click(sender As Object, e As EventArgs) Handles Guna2Button6.Click
+        FrmPayment.Show()
         Me.Hide()
     End Sub
 

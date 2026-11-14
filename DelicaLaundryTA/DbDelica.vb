@@ -8,7 +8,7 @@ Module DbDelica
         "Port=3306;" &
         "Database=delica_laundry;" &
         "User ID=root;" &
-        "Password=;" &
+        "Password=root123;" &
         "SslMode=Disabled;" &
         "AllowPublicKeyRetrieval=True;"
 

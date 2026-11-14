@@ -36,7 +36,8 @@ Public Class FrmCustomer
     ' HAK AKSES
     ' ==========================================
     Private Sub ApplyRoleAccess()
-        btnMasterUser.Visible = (Sesi.UserRole = "Owner")
+        btnMasterUser.Visible = True
+        btnMasterUser.Enabled = True
     End Sub
 
     ' ==========================================
@@ -342,6 +343,9 @@ Public Class FrmCustomer
     ' NAVIGASI SIDEBAR
     ' ==========================================
     Private Sub btnMasterService_Click(sender As Object, e As EventArgs) Handles btnMasterService.Click
+        If Sesi.UserRole <> "Owner" AndAlso
+       Sesi.UserRole <> "Staff Laundry" AndAlso
+       Sesi.UserRole <> "Staff Antar-Jemput" Then Return
         FrmServices.Show()
         Me.Hide()
     End Sub
@@ -356,5 +360,20 @@ Public Class FrmCustomer
         MessageBox.Show(kegiatan & ": " & ex.Message,
                         "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
+    Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
+        FrmOrder.Show()
+        Me.Hide()
+    End Sub
 
+    ' Navigasi Pembayaran
+    Private Sub Guna2Button6_Click(sender As Object, e As EventArgs) Handles Guna2Button6.Click
+        FrmPayment.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnMasterCustomer_Click(sender As Object, e As EventArgs) Handles btnMasterCustomer.Click
+        If Sesi.UserRole <> "Owner" AndAlso
+       Sesi.UserRole <> "Staff Laundry" AndAlso
+       Sesi.UserRole <> "Staff Antar-Jemput" Then Return
+    End Sub
 End Class

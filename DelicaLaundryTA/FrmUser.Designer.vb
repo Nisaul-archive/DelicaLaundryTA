@@ -72,6 +72,7 @@ Partial Class FrmUser
         Me.pnlContent = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.dgvService = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.btnAntarJemput = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2CustomGradientPanel4.SuspendLayout()
         CType(Me.dgvUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSearchUser.SuspendLayout()
@@ -570,6 +571,7 @@ Partial Class FrmUser
         '
         'pnlSidebarServices
         '
+        Me.pnlSidebarServices.Controls.Add(Me.btnAntarJemput)
         Me.pnlSidebarServices.Controls.Add(Me.Guna2Button7)
         Me.pnlSidebarServices.Controls.Add(Me.Guna2ImageButton1)
         Me.pnlSidebarServices.Controls.Add(Me.Guna2TileButton1)
@@ -598,7 +600,7 @@ Partial Class FrmUser
         Me.Guna2Button7.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button7.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button7.Location = New System.Drawing.Point(0, 444)
+        Me.Guna2Button7.Location = New System.Drawing.Point(0, 495)
         Me.Guna2Button7.Name = "Guna2Button7"
         Me.Guna2Button7.PressedColor = System.Drawing.Color.LightSkyBlue
         Me.Guna2Button7.Size = New System.Drawing.Size(200, 45)
@@ -633,7 +635,7 @@ Partial Class FrmUser
         Me.Guna2TileButton1.FillColor = System.Drawing.Color.White
         Me.Guna2TileButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TileButton1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TileButton1.Location = New System.Drawing.Point(14, 528)
+        Me.Guna2TileButton1.Location = New System.Drawing.Point(12, 560)
         Me.Guna2TileButton1.Name = "Guna2TileButton1"
         Me.Guna2TileButton1.Size = New System.Drawing.Size(180, 45)
         Me.Guna2TileButton1.TabIndex = 6
@@ -810,6 +812,24 @@ Partial Class FrmUser
         Me.Guna2HtmlLabel8.TabIndex = 2
         Me.Guna2HtmlLabel8.Text = "MASTER DATA LAYANAN"
         '
+        'btnAntarJemput
+        '
+        Me.btnAntarJemput.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnAntarJemput.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAntarJemput.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAntarJemput.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAntarJemput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAntarJemput.FillColor = System.Drawing.Color.Transparent
+        Me.btnAntarJemput.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAntarJemput.ForeColor = System.Drawing.Color.White
+        Me.btnAntarJemput.Location = New System.Drawing.Point(0, 444)
+        Me.btnAntarJemput.Name = "btnAntarJemput"
+        Me.btnAntarJemput.PressedColor = System.Drawing.Color.LightSkyBlue
+        Me.btnAntarJemput.Size = New System.Drawing.Size(200, 45)
+        Me.btnAntarJemput.TabIndex = 10
+        Me.btnAntarJemput.Text = "Antar-Jemput"
+        Me.btnAntarJemput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
         'FrmUser
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -885,4 +905,5 @@ Partial Class FrmUser
     Friend WithEvents pnlContent As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents dgvService As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnAntarJemput As Guna.UI2.WinForms.Guna2Button
 End Class

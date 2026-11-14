@@ -224,8 +224,11 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.vb</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="FrmOrder.resx">
-     <DependentUpon>FrmOrder.vb</DependentUpon>
+    <EmbeddedResource Include="FrmOrder.resx">
+      <DependentUpon>FrmOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPayment.resx">
+      <DependentUpon>FrmPayment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmServices.resx">
       <DependentUpon>FrmServices.vb</DependentUpon>

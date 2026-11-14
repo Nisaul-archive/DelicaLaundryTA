@@ -23,15 +23,16 @@ Partial Class FrmCustomer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCustomer))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlHeaderServices = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.lblDelicaLaundryServices = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Guna2CustomGradientPanel2 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.pnlSidebarServices = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Me.btnAntarJemput = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button7 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2TileButton1 = New Guna.UI2.WinForms.Guna2TileButton()
@@ -130,6 +131,7 @@ Partial Class FrmCustomer
         '
         'pnlSidebarServices
         '
+        Me.pnlSidebarServices.Controls.Add(Me.btnAntarJemput)
         Me.pnlSidebarServices.Controls.Add(Me.Guna2Button7)
         Me.pnlSidebarServices.Controls.Add(Me.Guna2ImageButton1)
         Me.pnlSidebarServices.Controls.Add(Me.Guna2TileButton1)
@@ -148,6 +150,24 @@ Partial Class FrmCustomer
         Me.pnlSidebarServices.Size = New System.Drawing.Size(200, 644)
         Me.pnlSidebarServices.TabIndex = 0
         '
+        'btnAntarJemput
+        '
+        Me.btnAntarJemput.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnAntarJemput.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAntarJemput.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAntarJemput.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAntarJemput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAntarJemput.FillColor = System.Drawing.Color.Transparent
+        Me.btnAntarJemput.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAntarJemput.ForeColor = System.Drawing.Color.White
+        Me.btnAntarJemput.Location = New System.Drawing.Point(0, 443)
+        Me.btnAntarJemput.Name = "btnAntarJemput"
+        Me.btnAntarJemput.PressedColor = System.Drawing.Color.LightSkyBlue
+        Me.btnAntarJemput.Size = New System.Drawing.Size(200, 45)
+        Me.btnAntarJemput.TabIndex = 10
+        Me.btnAntarJemput.Text = "Antar-Jemput"
+        Me.btnAntarJemput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
         'Guna2Button7
         '
         Me.Guna2Button7.BackColor = System.Drawing.Color.CornflowerBlue
@@ -158,7 +178,7 @@ Partial Class FrmCustomer
         Me.Guna2Button7.FillColor = System.Drawing.Color.Transparent
         Me.Guna2Button7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Guna2Button7.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button7.Location = New System.Drawing.Point(1, 444)
+        Me.Guna2Button7.Location = New System.Drawing.Point(1, 494)
         Me.Guna2Button7.Name = "Guna2Button7"
         Me.Guna2Button7.PressedColor = System.Drawing.Color.LightSkyBlue
         Me.Guna2Button7.Size = New System.Drawing.Size(200, 45)
@@ -193,7 +213,7 @@ Partial Class FrmCustomer
         Me.Guna2TileButton1.FillColor = System.Drawing.Color.White
         Me.Guna2TileButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TileButton1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2TileButton1.Location = New System.Drawing.Point(12, 525)
+        Me.Guna2TileButton1.Location = New System.Drawing.Point(12, 572)
         Me.Guna2TileButton1.Name = "Guna2TileButton1"
         Me.Guna2TileButton1.Size = New System.Drawing.Size(180, 45)
         Me.Guna2TileButton1.TabIndex = 6
@@ -664,27 +684,27 @@ Partial Class FrmCustomer
         '
         'dgvCustomer
         '
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.dgvCustomer.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.dgvCustomer.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvCustomer.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvCustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvCustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvCustomer.ColumnHeadersHeight = 4
         Me.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvCustomer.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvCustomer.DefaultCellStyle = DataGridViewCellStyle9
         Me.dgvCustomer.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvCustomer.Location = New System.Drawing.Point(15, 444)
         Me.dgvCustomer.Name = "dgvCustomer"
@@ -718,8 +738,8 @@ Partial Class FrmCustomer
         '
         'FrmCustomer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1028, 644)
         Me.Controls.Add(Me.Guna2CustomGradientPanel4)
         Me.Controls.Add(Me.pnlHeaderServices)
@@ -782,4 +802,5 @@ Partial Class FrmCustomer
     Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents btnAntarJemput As Guna.UI2.WinForms.Guna2Button
 End Class
