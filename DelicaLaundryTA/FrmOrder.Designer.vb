@@ -22,13 +22,13 @@ Partial Class FrmOrder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOrder))
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.pnlSidebarServices = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Me.btnAntarJemput = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button7 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2TileButton1 = New Guna.UI2.WinForms.Guna2TileButton()
         Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
@@ -48,8 +48,6 @@ Partial Class FrmOrder
         Me.dgvOrderDetail = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.pnlOrderDetail = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.lblUnit = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnClearService = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.btnAddService = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.nudQuantity = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.txtUnitPrice = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtSubtotal = New Guna.UI2.WinForms.Guna2TextBox()
@@ -77,14 +75,16 @@ Partial Class FrmOrder
         Me.txtSearchCustomer = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.btnSearchCustomer = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.lblTotalService = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblTotalOrder = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblOrderSystemStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.btnClearService = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.btnAddService = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnSaveOrder = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnResetOrder = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnUpdateOrder = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.btnDeleteOrder = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.lblTotalService = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.lblTotalOrder = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.lblOrderSystemStatus = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.btnAntarJemput = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2ImageButton1 = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.pnlSidebarServices.SuspendLayout()
         Me.pnlContent.SuspendLayout()
         Me.Guna2Panel1.SuspendLayout()
@@ -118,6 +118,24 @@ Partial Class FrmOrder
         Me.pnlSidebarServices.Size = New System.Drawing.Size(200, 819)
         Me.pnlSidebarServices.TabIndex = 1
         '
+        'btnAntarJemput
+        '
+        Me.btnAntarJemput.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.btnAntarJemput.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAntarJemput.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAntarJemput.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAntarJemput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAntarJemput.FillColor = System.Drawing.Color.Transparent
+        Me.btnAntarJemput.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAntarJemput.ForeColor = System.Drawing.Color.White
+        Me.btnAntarJemput.Location = New System.Drawing.Point(0, 445)
+        Me.btnAntarJemput.Name = "btnAntarJemput"
+        Me.btnAntarJemput.PressedColor = System.Drawing.Color.LightSkyBlue
+        Me.btnAntarJemput.Size = New System.Drawing.Size(200, 45)
+        Me.btnAntarJemput.TabIndex = 10
+        Me.btnAntarJemput.Text = "Antar-Jemput"
+        Me.btnAntarJemput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
         'Guna2Button7
         '
         Me.Guna2Button7.BackColor = System.Drawing.Color.CornflowerBlue
@@ -135,21 +153,6 @@ Partial Class FrmOrder
         Me.Guna2Button7.TabIndex = 9
         Me.Guna2Button7.Text = "Laporan"
         Me.Guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'Guna2ImageButton1
-        '
-        Me.Guna2ImageButton1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ImageButton1.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2ImageButton1.HoverState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2ImageButton1.Image = CType(resources.GetObject("Guna2ImageButton1.Image"), System.Drawing.Image)
-        Me.Guna2ImageButton1.ImageOffset = New System.Drawing.Point(0, 0)
-        Me.Guna2ImageButton1.ImageRotate = 0!
-        Me.Guna2ImageButton1.ImageSize = New System.Drawing.Size(120, 120)
-        Me.Guna2ImageButton1.Location = New System.Drawing.Point(26, 8)
-        Me.Guna2ImageButton1.Name = "Guna2ImageButton1"
-        Me.Guna2ImageButton1.PressedState.ImageSize = New System.Drawing.Size(64, 64)
-        Me.Guna2ImageButton1.Size = New System.Drawing.Size(144, 111)
-        Me.Guna2ImageButton1.TabIndex = 7
         '
         'Guna2TileButton1
         '
@@ -397,26 +400,26 @@ Partial Class FrmOrder
         '
         'dgvOrderDetail
         '
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.dgvOrderDetail.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvOrderDetail.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.dgvOrderDetail.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOrderDetail.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvOrderDetail.ColumnHeadersHeight = 4
         Me.dgvOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvOrderDetail.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOrderDetail.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOrderDetail.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.dgvOrderDetail.Location = New System.Drawing.Point(14, 495)
         Me.dgvOrderDetail.Name = "dgvOrderDetail"
@@ -477,46 +480,6 @@ Partial Class FrmOrder
         Me.lblUnit.SelectedText = ""
         Me.lblUnit.Size = New System.Drawing.Size(30, 29)
         Me.lblUnit.TabIndex = 32
-        '
-        'btnClearService
-        '
-        Me.btnClearService.BorderRadius = 8
-        Me.btnClearService.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnClearService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnClearService.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnClearService.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnClearService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnClearService.FillColor = System.Drawing.Color.LightGray
-        Me.btnClearService.FillColor2 = System.Drawing.Color.LightGray
-        Me.btnClearService.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClearService.ForeColor = System.Drawing.Color.Black
-        Me.btnClearService.Image = CType(resources.GetObject("btnClearService.Image"), System.Drawing.Image)
-        Me.btnClearService.Location = New System.Drawing.Point(155, 131)
-        Me.btnClearService.Name = "btnClearService"
-        Me.btnClearService.Size = New System.Drawing.Size(119, 35)
-        Me.btnClearService.TabIndex = 29
-        Me.btnClearService.Text = "Reset"
-        Me.btnClearService.TextOffset = New System.Drawing.Point(2, -2)
-        '
-        'btnAddService
-        '
-        Me.btnAddService.BorderRadius = 8
-        Me.btnAddService.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnAddService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnAddService.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnAddService.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnAddService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnAddService.FillColor = System.Drawing.Color.Chartreuse
-        Me.btnAddService.FillColor2 = System.Drawing.Color.Chartreuse
-        Me.btnAddService.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddService.ForeColor = System.Drawing.Color.Black
-        Me.btnAddService.Image = CType(resources.GetObject("btnAddService.Image"), System.Drawing.Image)
-        Me.btnAddService.Location = New System.Drawing.Point(13, 131)
-        Me.btnAddService.Name = "btnAddService"
-        Me.btnAddService.Size = New System.Drawing.Size(123, 35)
-        Me.btnAddService.TabIndex = 29
-        Me.btnAddService.Text = "Simpan"
-        Me.btnAddService.TextOffset = New System.Drawing.Point(2, -2)
         '
         'nudQuantity
         '
@@ -918,6 +881,79 @@ Partial Class FrmOrder
         Me.btnSearchCustomer.Text = "Cari"
         Me.btnSearchCustomer.TextOffset = New System.Drawing.Point(0, -2)
         '
+        'lblTotalService
+        '
+        Me.lblTotalService.BackColor = System.Drawing.Color.Transparent
+        Me.lblTotalService.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalService.ForeColor = System.Drawing.Color.Black
+        Me.lblTotalService.Location = New System.Drawing.Point(215, 825)
+        Me.lblTotalService.Name = "lblTotalService"
+        Me.lblTotalService.Size = New System.Drawing.Size(119, 23)
+        Me.lblTotalService.TabIndex = 36
+        Me.lblTotalService.Text = "Total Layanan: 0"
+        '
+        'lblTotalOrder
+        '
+        Me.lblTotalOrder.BackColor = System.Drawing.Color.Transparent
+        Me.lblTotalOrder.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalOrder.ForeColor = System.Drawing.Color.Black
+        Me.lblTotalOrder.Location = New System.Drawing.Point(366, 824)
+        Me.lblTotalOrder.Name = "lblTotalOrder"
+        Me.lblTotalOrder.Size = New System.Drawing.Size(120, 23)
+        Me.lblTotalOrder.TabIndex = 37
+        Me.lblTotalOrder.Text = "Total Pesanan: 0"
+        '
+        'lblOrderSystemStatus
+        '
+        Me.lblOrderSystemStatus.BackColor = System.Drawing.Color.Transparent
+        Me.lblOrderSystemStatus.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOrderSystemStatus.ForeColor = System.Drawing.Color.Black
+        Me.lblOrderSystemStatus.Location = New System.Drawing.Point(877, 825)
+        Me.lblOrderSystemStatus.Name = "lblOrderSystemStatus"
+        Me.lblOrderSystemStatus.Size = New System.Drawing.Size(87, 23)
+        Me.lblOrderSystemStatus.TabIndex = 38
+        Me.lblOrderSystemStatus.Text = "Status: Siap"
+        '
+        'btnClearService
+        '
+        Me.btnClearService.BorderRadius = 8
+        Me.btnClearService.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnClearService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnClearService.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnClearService.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnClearService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnClearService.FillColor = System.Drawing.Color.LightGray
+        Me.btnClearService.FillColor2 = System.Drawing.Color.LightGray
+        Me.btnClearService.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClearService.ForeColor = System.Drawing.Color.Black
+        Me.btnClearService.Image = CType(resources.GetObject("btnClearService.Image"), System.Drawing.Image)
+        Me.btnClearService.Location = New System.Drawing.Point(155, 131)
+        Me.btnClearService.Name = "btnClearService"
+        Me.btnClearService.Size = New System.Drawing.Size(119, 35)
+        Me.btnClearService.TabIndex = 29
+        Me.btnClearService.Text = "Reset"
+        Me.btnClearService.TextOffset = New System.Drawing.Point(2, -2)
+        '
+        'btnAddService
+        '
+        Me.btnAddService.BorderRadius = 8
+        Me.btnAddService.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnAddService.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnAddService.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAddService.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnAddService.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnAddService.FillColor = System.Drawing.Color.Chartreuse
+        Me.btnAddService.FillColor2 = System.Drawing.Color.Chartreuse
+        Me.btnAddService.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddService.ForeColor = System.Drawing.Color.Black
+        Me.btnAddService.Image = CType(resources.GetObject("btnAddService.Image"), System.Drawing.Image)
+        Me.btnAddService.Location = New System.Drawing.Point(13, 131)
+        Me.btnAddService.Name = "btnAddService"
+        Me.btnAddService.Size = New System.Drawing.Size(123, 35)
+        Me.btnAddService.TabIndex = 29
+        Me.btnAddService.Text = "Simpan"
+        Me.btnAddService.TextOffset = New System.Drawing.Point(2, -2)
+        '
         'btnSaveOrder
         '
         Me.btnSaveOrder.BorderRadius = 8
@@ -1000,56 +1036,20 @@ Partial Class FrmOrder
         Me.btnDeleteOrder.Text = "Hapus"
         Me.btnDeleteOrder.TextOffset = New System.Drawing.Point(2, -2)
         '
-        'lblTotalService
+        'Guna2ImageButton1
         '
-        Me.lblTotalService.BackColor = System.Drawing.Color.Transparent
-        Me.lblTotalService.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalService.ForeColor = System.Drawing.Color.Black
-        Me.lblTotalService.Location = New System.Drawing.Point(215, 825)
-        Me.lblTotalService.Name = "lblTotalService"
-        Me.lblTotalService.Size = New System.Drawing.Size(119, 23)
-        Me.lblTotalService.TabIndex = 36
-        Me.lblTotalService.Text = "Total Layanan: 0"
-        '
-        'lblTotalOrder
-        '
-        Me.lblTotalOrder.BackColor = System.Drawing.Color.Transparent
-        Me.lblTotalOrder.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalOrder.ForeColor = System.Drawing.Color.Black
-        Me.lblTotalOrder.Location = New System.Drawing.Point(366, 824)
-        Me.lblTotalOrder.Name = "lblTotalOrder"
-        Me.lblTotalOrder.Size = New System.Drawing.Size(120, 23)
-        Me.lblTotalOrder.TabIndex = 37
-        Me.lblTotalOrder.Text = "Total Pesanan: 0"
-        '
-        'lblOrderSystemStatus
-        '
-        Me.lblOrderSystemStatus.BackColor = System.Drawing.Color.Transparent
-        Me.lblOrderSystemStatus.Font = New System.Drawing.Font("Segoe UI Semibold", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOrderSystemStatus.ForeColor = System.Drawing.Color.Black
-        Me.lblOrderSystemStatus.Location = New System.Drawing.Point(877, 825)
-        Me.lblOrderSystemStatus.Name = "lblOrderSystemStatus"
-        Me.lblOrderSystemStatus.Size = New System.Drawing.Size(87, 23)
-        Me.lblOrderSystemStatus.TabIndex = 38
-        Me.lblOrderSystemStatus.Text = "Status: Siap"
-        '
-        'btnAntarJemput
-        '
-        Me.btnAntarJemput.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.btnAntarJemput.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnAntarJemput.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnAntarJemput.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnAntarJemput.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnAntarJemput.FillColor = System.Drawing.Color.Transparent
-        Me.btnAntarJemput.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAntarJemput.ForeColor = System.Drawing.Color.White
-        Me.btnAntarJemput.Location = New System.Drawing.Point(0, 445)
-        Me.btnAntarJemput.Name = "btnAntarJemput"
-        Me.btnAntarJemput.PressedColor = System.Drawing.Color.LightSkyBlue
-        Me.btnAntarJemput.Size = New System.Drawing.Size(200, 45)
-        Me.btnAntarJemput.TabIndex = 10
-        Me.btnAntarJemput.Text = "Antar-Jemput"
-        Me.btnAntarJemput.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Guna2ImageButton1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ImageButton1.CheckedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton1.HoverState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton1.Image = CType(resources.GetObject("Guna2ImageButton1.Image"), System.Drawing.Image)
+        Me.Guna2ImageButton1.ImageOffset = New System.Drawing.Point(0, 0)
+        Me.Guna2ImageButton1.ImageRotate = 0!
+        Me.Guna2ImageButton1.ImageSize = New System.Drawing.Size(120, 120)
+        Me.Guna2ImageButton1.Location = New System.Drawing.Point(26, 8)
+        Me.Guna2ImageButton1.Name = "Guna2ImageButton1"
+        Me.Guna2ImageButton1.PressedState.ImageSize = New System.Drawing.Size(64, 64)
+        Me.Guna2ImageButton1.Size = New System.Drawing.Size(144, 111)
+        Me.Guna2ImageButton1.TabIndex = 7
         '
         'FrmOrder
         '
